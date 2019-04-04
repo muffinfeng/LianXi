@@ -1,0 +1,21 @@
+<view class='wrapper'>
+  <view class='songList'>
+    <block wx:for="{{allAudio}}" wx:for-index="index" wx:for-item="audio" wx:key="key">
+      <view class='song'>
+          <view class='imageBox'>
+            <image src='image/play.png' class='icon'></image>
+            <image src='{{audio.imgUrl}}' class='image'></image>
+          </view>
+          <view class='text'>
+            <view>{{audio.author}}</view>
+            <view>{{audio.audioName}}</view>
+            <view>{{audio.audioType}}</view>
+            
+          </view>
+      </view>
+    </block>
+  </view>
+  <view class='button'>
+    <button >{{textButton}}</button>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<template name="checkboxTemplate">
+  <view>
+    <checkbox>{{item}}{{test}}</checkbox>
+  </view>
+</template>

@@ -1,0 +1,57 @@
+/* pages/music/music.wxss */
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.audioList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 750rpx;
+  
+}
+
+.song{
+  display: flex;
+  justify-content: space-between;
+  margin: 5rpx;
+  height: 150rpx;
+  width:98%;
+  
+}
+
+.imageBox{
+  width:160rpx;
+  height: 150rpx;
+  position: relative;
+}
+
+.image{
+  padding: 10rpx;
+  height: 130rpx;
+  width:130rpx;
+}
+
+.icon{
+  position:absolute;
+  height: 50rpx;
+  width:50rpx;
+  margin: 50rpx 0 0 50rpx;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  height: 110rpx;
+  
+  margin-top: 70rpx;
+  text-align: center;
+}

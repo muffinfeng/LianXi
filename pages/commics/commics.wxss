@@ -1,0 +1,23 @@
+Page {
+  width: 100%;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+}
+
+.frame .image {
+  width: 100%;
+  z-index: 1;
+}
+
+.frame .text {
+  position: absolute;
+  z-index: 2;
+  margin-top: 50%;
+  top: -200rpx;
+  right: 20rpx;
+  width: 150rpx;
+  height: 400rpx;
+}

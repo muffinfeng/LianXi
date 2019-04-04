@@ -1,0 +1,30 @@
+<camera
+  device-position="back"
+  flash="off"
+  binderror="error"
+  style="width: 100%; height: 630px;"
+  bindtap="choosePhoto"
+>
+
+
+  
+    <cover-view class="table">
+    <cover-view class="td"></cover-view>
+    <cover-view class="td"></cover-view>
+    <cover-view class="td"><cover-image class="flash" src="flash.png" bindtap="a"/></cover-view>
+    <block wx:for='{{6}}' wx:key='*this' >
+      <cover-view class="td">
+        
+      </cover-view>
+    </block>
+    </cover-view>
+  
+  
+   
+  
+ 
+
+
+</camera>
+
+<button type="primary" bindtap="takePhoto">拍照</button>

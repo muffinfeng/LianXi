@@ -1,0 +1,11 @@
+<view style="text-align: center;">
+   <view capture-bind:tap="a" bind:tap="a">
+   最外层
+     <view >
+     中间层
+       <view capture-bind:tap="c" bind:tap="c">
+       最内层
+       </view>
+     </view>
+   </view>
+ </view>

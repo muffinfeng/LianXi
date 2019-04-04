@@ -1,0 +1,4 @@
+
+<button bindtap="download">点击下载</button>
+
+<progress percent="{{percent}}" stroke-width="12"></progress>

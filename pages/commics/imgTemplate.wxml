@@ -1,0 +1,8 @@
+<wxs src="format.wxs" module="format"></wxs>
+
+<template name="imgTemplate">
+  <view class="frame" data-index="{{index}}" bindtap='edit'>
+      <image src='{{src}}' class="image" mode="aspectFit" data-tag='image'></image>
+      <text class="text" hidden='{{!aside}}' data-tag='text'>{{format.comma(text)}}</text>
+  </view>
+</template>

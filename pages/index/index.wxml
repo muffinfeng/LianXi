@@ -1,0 +1,37 @@
+<!--index.wxml-->
+
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  
+  <view wx:if="{{date % 2 != 0}}">
+      单数天: {{date}}
+      年月日  {{year}}年{{month}}月{{date}}日
+  </view>
+  <view wx:else>
+      双数天:{{date}}
+      时分秒  {{hour}}:{{minute}}:{{second}}
+  </view>
+
+  <view wx:for="{{list }}"
+    wx:for-index="index"
+    wx:for-item="item"
+    wx:key="*this"
+  >
+    <import src="checkboxTemplate.wxml" />
+      <template is="checkboxTemplate" data="{{item: item,test:'fff'}}">
+      </template>
+    
+  </view>
+  
+  
+</view>

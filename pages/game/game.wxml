@@ -1,0 +1,20 @@
+<view class="game">
+ <view class="game-inner">
+   <view class="game-hd">
+     <text class="title">来，玩个小游戏！</text>
+   </view>
+   <view class="game-bd" bindtap='getGameResult'>
+     <!-- 为按钮绑定事件 -->
+     
+     <button class="btn btn-1" data-text="yk">剪刀</button>
+     <button class="btn btn-2">石头</button>
+     <button class="btn btn-3">布</button>
+   </view>
+   <view class="game-ft">
+     <text class="result">{{ result }}</text>
+   </view>
+
+
+
+ </view>
+</view>

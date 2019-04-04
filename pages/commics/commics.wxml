@@ -1,0 +1,6 @@
+<view class="wrap">
+  <block wx:for="{{images}}" wx:for-index="index" wx:for-item="image" wx:key="{{unique}}">
+    <import src="imgTemplate.wxml" />
+    <template is="imgTemplate" data="{{...image,index:index}}" />
+  </block>
+</view>

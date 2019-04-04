@@ -1,0 +1,5 @@
+module.exports = {
+  comma : function(text){
+    return text.toString().replace(getRegExp('，','g'),',');
+  }
+}

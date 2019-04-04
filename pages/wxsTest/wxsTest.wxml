@@ -1,0 +1,47 @@
+<wxs module="format">
+ module.exports.date = function(time){
+    var realDate = getDate(time);
+    
+    function timeFormat(num){
+      return num < 10 ? '0' + num : num;
+    }
+
+    var regYear = getRegExp("(y+)", "i");
+    format = "yyyy年MM月dd日 星期jj hh时mm分ss秒";
+    var reg1 = regYear.exec(format);
+   
+    
+    var date = [
+      ["M+", timeFormat(realDate.getMonth() + 1)],
+      ["d+", timeFormat(realDate.getDate())],
+      ["h+", timeFormat(realDate.getHours())],
+      ["m+", timeFormat(realDate.getMinutes())],
+      ["s+", timeFormat(realDate.getSeconds())],
+      ["j+", realDate.getDay()]
+    ];
+    
+    format = format.replace(reg1[1],(realDate.getFullYear() + '').substring(4 - reg1[1].length));
+    
+
+    for (var i=0;i<date.length;i++) {
+      var k = date[i][0]; //M+   d+
+      var v = date[i][1];
+      
+      var reg2 = getRegExp("(" + k + ")").exec(format); //MM,MM  dd,dd 
+      console.log(reg2);
+      if (reg2) {
+        if(reg2[1] == 'jj'){
+          format = format.replace(reg2[1],"日一二三四五六".charAt(v));
+        }else{
+          format = format.replace(reg2[1], v);
+        }
+        console.log(format);
+      }
+    }
+    
+
+    return format;
+ }
+</wxs>
+
+<view>{{format.date(timestamp)}}</view>

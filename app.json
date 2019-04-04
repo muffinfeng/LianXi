@@ -1,0 +1,19 @@
+{
+  "pages": ["pages/music/music",
+    "pages/downloadAPI/downloadAPI",
+    "pages/camera/camera",
+    "pages/commics/commics",
+    "pages/wxsTest/wxsTest",
+    "pages/index/index",
+    "pages/game/game",
+    "pages/capturebind/capturebind",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
